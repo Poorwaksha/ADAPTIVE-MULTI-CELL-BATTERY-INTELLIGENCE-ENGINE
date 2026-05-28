@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "author": "Battery Internship Project",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-arduino-uno",
+      "id": "arduino",
+      "top": 180,
+      "left": 0,
+      "attrs": {}
+    },
+
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd",
+      "top": -120,
+      "left": 130,
+      "attrs": {}
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": 20,
+      "left": -80,
+      "attrs": { "label": "Cell1" }
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": 20,
+      "left": 40,
+      "attrs": { "label": "Cell2" }
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": 20,
+      "left": 160,
+      "attrs": { "label": "Cell3" }
+    },
+
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot4",
+      "top": 20,
+      "left": 280,
+      "attrs": { "label": "Cell4" }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "green",
+      "top": 340,
+      "left": -90,
+      "attrs": { "color": "green" }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "yellow",
+      "top": 340,
+      "left": -40,
+      "attrs": { "color": "yellow" }
+    },
+
+    {
+      "type": "wokwi-led",
+      "id": "red",
+      "top": 340,
+      "left": 10,
+      "attrs": { "color": "red" }
+    },
+
+    {
+      "type": "wokwi-buzzer",
+      "id": "buzz",
+      "top": 330,
+      "left": 80,
+      "attrs": {}
+    }
+  ],
+
+  "connections": [
+
+    ["pot1:SIG", "arduino:A0", "green", []],
+    ["pot1:VCC", "arduino:5V", "red", []],
+    ["pot1:GND", "arduino:GND.1", "black", []],
+
+    ["pot2:SIG", "arduino:A1", "green", []],
+    ["pot2:VCC", "arduino:5V", "red", []],
+    ["pot2:GND", "arduino:GND.1", "black", []],
+
+    ["pot3:SIG", "arduino:A2", "green", []],
+    ["pot3:VCC", "arduino:5V", "red", []],
+    ["pot3:GND", "arduino:GND.1", "black", []],
+
+    ["pot4:SIG", "arduino:A3", "green", []],
+    ["pot4:VCC", "arduino:5V", "red", []],
+    ["pot4:GND", "arduino:GND.1", "black", []],
+
+    ["green:A", "arduino:8", "green", []],
+    ["green:C", "arduino:GND.1", "black", []],
+
+    ["yellow:A", "arduino:9", "yellow", []],
+    ["yellow:C", "arduino:GND.1", "black", []],
+
+    ["red:A", "arduino:10", "red", []],
+    ["red:C", "arduino:GND.1", "black", []],
+
+    ["buzz:1", "arduino:7", "purple", []],
+    ["buzz:2", "arduino:GND.1", "black", []],
+
+    ["lcd:VSS", "arduino:GND.1", "black", []],
+    ["lcd:VDD", "arduino:5V", "red", []],
+    ["lcd:VO", "arduino:GND.1", "blue", []],
+
+    ["lcd:RS", "arduino:12", "blue", []],
+    ["lcd:RW", "arduino:GND.1", "black", []],
+    ["lcd:E", "arduino:11", "blue", []],
+
+    ["lcd:D4", "arduino:5", "blue", []],
+    ["lcd:D5", "arduino:4", "blue", []],
+    ["lcd:D6", "arduino:3", "blue", []],
+    ["lcd:D7", "arduino:2", "blue", []],
+
+    ["lcd:A", "arduino:5V", "red", []],
+    ["lcd:K", "arduino:GND.1", "black", []]
+  ]
+}
