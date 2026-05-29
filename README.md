@@ -1,2 +1,6 @@
-# ADAPTIVE-MULTI-CELL-BATTERY-INTELLIGENCE-ENGINE
-A production-grade Adaptive Multi-Cell Battery Intelligence Engine developed using Arduino UNO and Wokwi simulation platform. This embedded Battery Management System (BMS) performs real-time monitoring and analysis of a simulated 4-cell Lithium-ion battery pack. The system measures individual cell voltages, calculates pack voltage, detects voltage imbalance, identifies strongest and weakest cells, estimates State-of-Charge (SoC), and classifies battery health conditions including Healthy, Minor Imbalance, Critical Imbalance, and Pack Failure. The project also features a live LCD dashboard, LED-based visual alert system, buzzer warning mechanism, and a professional serial monitor interface using modular embedded system architecture principles.
+# Adaptive Multi-Cell Battery Intelligence Engine
+## Project Overview A production-grade 4-cell Li-ion BMS built on Arduino Uno. Monitors real-time voltage, detects imbalance, and classifies battery health using a modular embedded architecture.
+## Features - 4-cell individual voltage monitoring (A0–A3) - 8x oversampling ADC for noise reduction - Pack avg, imbalance %, SoC estimation - Health states: Healthy / Minor / Critical / Failure - Modular architecture (5 clean bms_* functions)
+## Live Simulation [▶ Run on Wokwi](https://wokwi.com/projects/465291814391311361)
+## Circuit 4x Potentiometers → Voltage divider (R1=100kΩ, R2=33kΩ) → Arduino analog pins A0–A3
+## Tech Stack Platform : Arduino Uno | Simulator: Wokwi Language : C++ (Arduino) | ADC: 10-bit, 5V ref
